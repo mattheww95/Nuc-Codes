@@ -60,7 +60,7 @@ my mind gff does not stand for General Feature Format but instead Good Friends F
 Why nuclear cody you might ask:
 Well during this whole COVID-19 debacle we were tasked with tallying various mutations from
 variants of concern (This was awful). There multiple different reference sequences and
-gff files for the reference sequence, and most literature would only site gene coordinates
+gff files for the reference sequence, and most literature would only cite gene coordinates
 which were not always the easiest to convert.
 
 Needless to say this made Cody go Nuclear! Everytime he saw gene coordinates, it was like watching two beryllium
