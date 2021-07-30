@@ -188,14 +188,14 @@ def help_message():
     ISSUE: These messages are coupled to tightly to the other methods used to call them.
     :return:
     """
-    print("nuc_codess help options")
+    print("nuc_codes help options")
     print("A program to help Cody and hopefully make him help me more.")
     print("")
     print("Initialize Program to save a gff and reference sequence.")
-    print("nuc_codess init <reference_fasta> <reference_gff> <project_name>")
+    print("nuc_codes init <reference_fasta> <reference_gff> <project_name>")
     print("")
     print("Check possible attributes to use for gff extraction.")
-    print("nuc_codess <project_name> attributes")
+    print("nuc_codes <project_name> attributes")
     print("e.g. nuc_codes <project_name> attributes")
     print("")
     print("Query a gene positions, you can query one or multiple conditions")
@@ -297,7 +297,7 @@ def control_gff_finder():
     help_msg = {"help", "-h", "--help"}
     file_loc = os.path.dirname(__file__)
     directory_info = os.listdir(file_loc)
-    if len(sys_args) < 4:
+    if len(sys_args) < 2:
         if sys_args[1] in help_msg:
             help_message()
         else:
