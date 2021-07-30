@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name="nuc-codes",
+    name="nuc_codes",
     author="Matthew Wells",
     author_email="matthew.wells@canada.ca",
-    entry_points={"console_scripts": ["nuc-codes=nuc-codes.nuc-codes:control_gff_finder"]},
+    entry_points={"console_scripts": ["nuc_codes=nuc_codes.nuc_codes:control_gff_finder"]},
 )
