@@ -1,6 +1,6 @@
 nuc_codes
 
-A simple tool you convert those pesky gene-coordinates to genome coordinates.
+A simple tool to help convert those pesky gene-coordinates to genome coordinates.
 
 
 Quickstart:
