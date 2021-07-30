@@ -304,12 +304,18 @@ def control_gff_finder():
             help_message()
     elif sys_args[1] == "init":
         # need to add check for if enough args
-        initialize_class_storage(sys_args[2], sys_args[3], sys_args[4])
+        try:
+            initialize_class_storage(sys_args[2], sys_args[3], sys_args[4])
+        except IndexError:
+            sys.exit("Could not recognize options.")
     elif sys_args[1] in directory_info:
         if sys_args[2] == "attributes":
-            get_class_attrs(sys_args[1]) # needs proj name to display attributes
+            get_class_attrs(sys_args[1])  # needs proj name to display attributes
         else:
-            read_initilized_class(sys_args[1], sys_args[2], sys_args[3], sys_args[4:])
+            try:
+                read_initilized_class(sys_args[1], sys_args[2], sys_args[3], sys_args[4:])
+            except IndexError:
+                sys.exit("Could not recognize options")
     else:
         sys.exit(f"Could not identify selected option {sys_args[1]}")
 
