@@ -5,5 +5,5 @@ setup(
     author="Matthew Wells",
     packages=find_packages(),
     author_email="matthew.wells@canada.ca",
-    scripts=["nuc_codes=nuc_codes/nuc_codes.py"],
+    scripts=["nuc_codes/nuc_codes.py"],
 )
