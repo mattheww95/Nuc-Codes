@@ -71,3 +71,6 @@ Unfortunately I could not rely on Cody forever, as his attention can be fleeting
 . So I did the only thing a Python developer could do.... dedicate a simple utility to them and beg them for aid.
 
 This is the story of nuc_codes, let us hope it is enough to win his future efforts.
+  
+  
+ Note of Contribution: Dillon Barker or on github dorbarker, The setup.py would not be functioning without him
