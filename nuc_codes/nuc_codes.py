@@ -305,5 +305,10 @@ def control_gff_finder(sys_args: list):
     return 0
 
 
+def main():
+    control_gff_finder()
+    return 0
+
+
 if __name__ == "__main__":
     control_gff_finder(sys.argv)
