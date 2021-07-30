@@ -289,6 +289,9 @@ def get_class_attrs(project_name):
 
 def control_gff_finder():
     sys_args = sys.argv
+    if len(sys_args) == 1:
+        help_message()
+        
     help_msg = {"help", "-h", "--help"}
     file_loc = os.path.dirname(__file__)
     directory_info = os.listdir(file_loc)
