@@ -297,8 +297,10 @@ def control_gff_finder():
     help_msg = {"help", "-h", "--help"}
     file_loc = os.path.dirname(__file__)
     directory_info = os.listdir(file_loc)
-    if len(sys_args) < 3:
+    if len(sys_args) < 4:
         if sys_args[1] in help_msg:
+            help_message()
+        else:
             help_message()
     elif sys_args[1] == "init":
         # need to add check for if enough args
