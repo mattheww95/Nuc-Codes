@@ -188,22 +188,23 @@ def help_message():
     ISSUE: These messages are coupled to tightly to the other methods used to call them.
     :return:
     """
-    print("nuc_code help options")
+    print("nuc_codess help options")
     print("A program to help Cody and hopefully make him help me more.")
     print("")
     print("Initialize Program to save a gff and reference sequence.")
-    print("nuc_code init <reference_fasta> <reference_gff> <project_name>")
+    print("nuc_codess init <reference_fasta> <reference_gff> <project_name>")
     print("")
     print("Check possible attributes to use for gff extraction.")
-    print("nuc_code <project_name> attributes")
-    print("e.g. nuc_code <project_name> attributes")
+    print("nuc_codess <project_name> attributes")
+    print("e.g. nuc_codes <project_name> attributes")
     print("")
     print("Query a gene positions, you can query one or multiple conditions")
-    print("nuc_code <project_name> <gff attribute key> <gff attribute key value> <Amino acid positions>")
-    print("e.g. nuc_code SARS Name orf1ab 4 5 6")
+    print("nuc_codes <project_name> <gff attribute key> <gff attribute key value> <Amino acid positions>")
+    print("e.g. nuc_codes SARS Name orf1ab 4 5 6")
     print("")
     print("Help note")
     print("If no attribute is displayed check that the values your are using exist in your gff.")
+    print("")
     print("Note of Importance:")
     print("The Phase attribute of GFF file is not included in the tabulation of nucleotides.")
     print("It is also assumed that the GFF being used is base 1 indexed.")
@@ -244,7 +245,7 @@ def initialize_class_storage(fasta: os.path, gff: os.path, project_name):
     with open(new_proj_file, "wb") as project:  # folder and pickled file will have same name
         pickle.Pickler(project, pickle.DEFAULT_PROTOCOL).dump(new_gff)
     print(f"Created new project {project_name}")
-    print(f"Query positions in the future enter nuc_code {project_name} <options>")
+    print(f"Query positions in the future enter nuc_codes {project_name} <options>")
     sys.exit()
 
 
@@ -260,7 +261,7 @@ def read_initilized_class(project_name, attribure_query, attribute_option, *argv
     project_path = os.path.join(os.path.dirname(__file__), project_name, project_name)
     if not os.path.exists(project_path):
         print(f"Could not find {project_name}, are you sure it has been initialized?")
-        sys.exit("To initialize a project enter: nuc_code init <ref fasta> <ref gff> <project name>")
+        sys.exit("To initialize a project enter: nuc_codes init <ref fasta> <ref gff> <project name>")
 
     with open(project_path, "rb") as prev_class:
         gff_class = pickle.load(prev_class)
@@ -278,7 +279,7 @@ def get_class_attrs(project_name):
     project_path = os.path.join(os.path.dirname(__file__), project_name, project_name)
     if not os.path.exists(project_path):
         print(f"Could not find {project_name}, are you sure it has been initialized?")
-        sys.exit("To initialize a project enter: nuc_code init <ref fasta> <ref gff> <project name>")
+        sys.exit("To initialize a project enter: nuc_codes init <ref fasta> <ref gff> <project name>")
 
     with open(project_path, "rb") as prev_class:
         gff_class = pickle.load(prev_class)
