@@ -2,6 +2,7 @@
 Convert genome coordinates based off of gff
 Fasta is single line, and 1 based
 """
+import getopt
 import os
 import sys
 import platform
@@ -286,7 +287,8 @@ def get_class_attrs(project_name):
     return 0
 
 
-def control_gff_finder(sys_args: list):
+def control_gff_finder():
+    sys_args = sys.argv
     help_msg = {"help", "-h", "--help"}
     file_loc = os.path.dirname(__file__)
     directory_info = os.listdir(file_loc)
@@ -306,4 +308,4 @@ def control_gff_finder(sys_args: list):
 
 
 if __name__ == "__main__":
-    control_gff_finder(sys_args=sys.argv)
+    control_gff_finder()
