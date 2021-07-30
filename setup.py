@@ -5,5 +5,5 @@ setup(
     author="Matthew Wells",
     packages=find_packages(),
     author_email="matthew.wells@canada.ca",
-    scripts=["nuc_codes/nuc_codes.py"],
+    console_scripts=["nuc_codes=nuc_codes.nuc_codes:control_gff_finder"],
 )
