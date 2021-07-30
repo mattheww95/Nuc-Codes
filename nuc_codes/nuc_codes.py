@@ -308,6 +308,8 @@ def control_gff_finder():
             get_class_attrs(sys_args[1]) # needs proj name to display attributes
         else:
             read_initilized_class(sys_args[1], sys_args[2], sys_args[3], sys_args[4:])
+    else:
+        sys.exit(f"Could not identify selected option {sys_args[1]}")
 
     return 0
 
