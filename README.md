@@ -7,6 +7,8 @@ Quickstart:
 Install globally or in an environment, I don't care what matters is that you use 
 python >3.7
 
+First clone the repository and cd into it, then:
+
 >pip install .
 
 Let it install
